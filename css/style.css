@@ -1,2 +1,19 @@
 @import url("./reset.css");
 
+.header {
+    display: flex
+    
+
+}
+
+.article {
+    display: flex
+}
+
+.aside {
+    display: flex
+}
+
+.footer {
+    display: flex
+}
