@@ -1,23 +1,33 @@
 @import url("./reset.css");
 
-body {
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: gray;
-    margin: 0;
-    font-family: sans-serif
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    /*border-radius: 5px;*/
 }
 
-.card {
+body {
+    /* display: flex; */
+    min-height: 100vh;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 2rem;
+    background-color: gray;
+    margin: 0;
+    
+}
+
+.flexbox {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 90%;
+    gap: 1rem;
+    width: 100%;
     max-width: 1200px;
+    /* min-height: 100vh; */
+    margin: 0 auto;
 }
 
 .header {
@@ -26,8 +36,8 @@ body {
     align-items: center;
     height: 60px;
     background-color: rgb(153, 37, 101);
-    font-size: 1.5em;
-    color: white;
+    
+    
     border-radius: 5px;
     
 }
@@ -35,14 +45,14 @@ body {
 .article {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: stretch; */
+    /* min-width: 100%; */
     background-color: rgb(65, 181, 118);
     border-radius: 5px;
-    padding: 10px;
-    gap: 10px;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .column {
@@ -51,10 +61,7 @@ body {
     align-items: center;
     flex: 1 1 150px;
     min-height: 60px;
-    min-width: 100%;
     background-color: rgb(219, 36, 96); 
-    color: white;
-    font-size: 1.5em;
     border-radius: 5px;
 }
 
@@ -62,11 +69,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    min-height: 60px;
     background-color: rgb(40, 99, 149);
-    font-size: 1.5em;
-    color: white;
+    padding: 1rem;
     border-radius: 5px;
+    margin-top: 1rem;
 }
 
 .footer {
@@ -74,23 +81,35 @@ body {
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 90%;
-    min-width: 100%;
+    width: 100%;
+    /* min-width: 100%; */
     background-color: rgb(216, 109, 43);
-    font-size: 1.5em;
-    color: white;
+    
     border-radius: 5px;
 }
 
 @media screen and (min-width: 992px) {
-    .article {
+
+    .desktop-wrapper {
+        display: flex;
         flex-direction: row;
         align-items: stretch;
+        flex: 1;
+        gap: 1rem;
+        /* min-height: 100vh; */
+    }
+
+    .article {
+        /* flex-direction: row; */
+        align-items: stretch;
+        gap: 1rem;
+        flex: 1;
+        order: 2;
     }
 
     .aside {
-        flex: 0 0 30%;
-        order: -1;
+        flex: 0 0 18rem;
+        order: 1;
     }
 
 }
